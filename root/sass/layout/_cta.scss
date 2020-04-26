@@ -1,0 +1,78 @@
+.cta {
+    padding: 0 7%;
+    padding-top: 12%;
+
+    &-trial {
+        background-color: $color-accent;
+        border-radius: 1rem;
+        box-shadow: $shadow;
+        margin-bottom: 3rem;
+        padding: 6% 15%;
+        text-align: center;
+
+        &__anchor {
+            display: block;
+            line-height: 1.8;
+            width: 100%;
+        }
+    }
+
+    &-form {
+        background-color: $color-white-2;
+        border-radius: 1rem;
+        box-shadow: $shadow;
+        padding: 5%;
+
+        &__input {
+            border: 1px solid rgba($color-neutral-1, .1);
+            border-radius: 6px;
+            color: rgba($color-neutral-1, .65);
+            font-family: inherit;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            outline: none;
+            padding: 1.5rem;
+            width: 100%;
+
+            &::placeholder {
+                color: inherit;
+                font-size: inherit;
+                font-weight: inherit;
+                text-transform: capitalize;
+            }
+
+            &:invalid {
+
+            }
+        }
+
+        &__button {
+            background-color: $color-primary-2;
+            border: none;
+            border-radius: 6px;
+            box-shadow: $shadow-green;
+            color: $color-white;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            outline: none;
+            padding: 1.5rem 0;
+            text-align: center;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+        &__terms {
+            color: $color-neutral-2;
+            margin-bottom: 1rem;
+            padding: 0 5%;
+
+            & .terms-link {
+                color: $color-primary-1;
+            }
+        }
+    }
+}

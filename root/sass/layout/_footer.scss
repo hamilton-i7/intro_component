@@ -1,0 +1,15 @@
+.footer {
+    background-color: $color-black;
+    margin-top: 8rem;
+    padding: 1.5rem;
+
+    &__paragraph {
+        font-size: 1.2rem;
+        font-weight: 400;
+        text-align: center;
+
+        & .link {
+            font-weight: 600;
+        }
+    }
+}
