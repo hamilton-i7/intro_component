@@ -1,0 +1,70 @@
+.desktop-layout {
+    //* MEDIUM SCREENS ON PORTRAIT
+    @media only screen and (min-width: 750px) and (max-width: 999px) and (min-height: 1100px) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+
+    //* BIG SCREENS ON PORTRAIT
+    @media only screen and (min-width: 350px) and (min-height: 1000px) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    @media only screen and (min-width: 1000px) and (orientation: portrait) {
+        @include flexRow(false);
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    @media only screen and (min-width: 1000px) and (min-height: 1000px) and (max-height: 1499px) {
+        position: initial;
+        left: initial;
+        top: initial;
+        transform: initial;
+    }
+
+    //* MEDIUM SCREENS ON LANDSCAPE
+    @media only screen and (min-width: 850px) and (max-width: 999px) and (max-height: 499px) {
+        @include flexRow(true);
+        @include flexContent($align: center, $justify: space-around);
+    }
+
+    //* BIG SCREENS ON LANDSCAPE
+    @media only screen and (min-width: 1000px) and (min-height: 750px) and (orientation: landscape) {
+        @include flexRow(true);
+        @include flexContent($align: center, $justify: space-around);
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+    @media only screen and (min-width: 1000px) and (max-height: 749px) {
+        @include flexRow(true);
+        @include flexContent($align: center, $justify: space-around);
+
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    @media only screen and (min-width: 1300px) and (orientation: landscape) {
+        @include flexContent($align: center, $justify: space-between);
+
+        margin: 0 auto;
+        width: 90%;
+    }
+    @media only screen and (min-width: 1400px) and (orientation: landscape) {
+        width: 80%;
+    }
+}

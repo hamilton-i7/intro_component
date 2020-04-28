@@ -8,6 +8,19 @@
 
 html {
     font-size: 62.5%;
+
+    //* BIG SCREENS ON LANDSCAPE
+    @media only screen and (min-width: 1500px) and (orientation: landscape) {
+        font-size: 66%;
+    }
+    @media only screen and (min-width: 1700px) and (orientation: landscape) {
+        font-size: 85%;
+    }
+
+    //* BIG SCREENS ON PORTRAIT
+    @media only screen and (min-width: 1000px) and (orientation: portrait) {
+        font-size: 90%;
+    }
 }
 
 body {
@@ -15,5 +28,48 @@ body {
     background-image: url(../images/bg-intro-mobile.png);
     box-sizing: border-box;
     overflow-x: hidden;
-    padding-top: 7rem;
+    padding: 7rem 0;
+
+    //* MEDIUM SCREENS ON LANDSCAPE
+    @media only screen and (min-width: 600px) and (max-height: 499px) {
+        background-image: url(../images/bg-intro-desktop.png);
+        padding-top: 2rem;
+    }
+
+    //* BIG SCREENS ON LANDSCAPE
+    @media only screen and (min-width: 1000px) and (orientation: landscape) {
+        background-image: url(../images/bg-intro-desktop.png);
+    }
+}
+
+.container {
+    padding: 0 7%;
+    //* SMALL SCREENS ON LANDSCAPE
+    @media only screen and (min-width: 500px) and (orientation: landscape) {
+        padding: 0 10%;
+    }
+
+    //* MEDIUM SCREENS ON LANDSCAPE
+    @media only screen and (min-width: 600px) and (max-width: 999px) and (max-height: 499px) {
+        padding: 0 18%;
+    }
+    @media only screen and (min-width: 700px) and (orientation: landscape) {
+        padding: 0 14%;
+    }
+    @media only screen and (min-width: 800px) and (orientation: landscape) {
+        padding: 0 18%;
+    }
+    @media only screen and (min-width: 850px) and (max-width: 999px) and (max-height: 499px) {
+        padding: 0;
+    }
+
+    //* BIG SCREENS ON LANDSCAPE
+    @media only screen and (min-width: 1000px) and (orientation: landscape) {
+        padding: 0;
+    }
+
+    //* BIG SCREENS ON PORTRAIT
+    @media only screen and (min-width: 1000px) and (orientation: portrait) {
+        padding: 0 15%;
+    }
 }

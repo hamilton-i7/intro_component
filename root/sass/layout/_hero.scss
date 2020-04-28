@@ -1,6 +1,17 @@
 .hero {
-    padding: 0 7%;
-    
+    //* MEDIUM SCREENS ON LANDSCAPE
+    @media only screen and (min-width: 850px) and (max-width: 999px) and (max-height: 499px) {
+        flex-basis: 45%;
+    }
+
+    //* BIG SCREENS ON LANDSCAPE
+    @media only screen and (min-width: 1000px) and (orientation: landscape) {
+        flex-basis: 44%;
+    }
+    @media only screen and (min-width: 1300px) and (orientation: landscape) {
+        flex-basis: 48%;
+    }
+
     &__heading {
         margin: 2rem 0;
     }

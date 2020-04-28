@@ -13,78 +13,53 @@
   <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero__heading">
-      <h1 class="heading-primary">learn to code by watching others</h1>
-    </div>
-
-    <div class="hero__paragraph">
-      <p class="paragraph">
-        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-        but understanding how developers think is invaluable. 
-      </p>
-    </div>
-  </header>
-
-  <main class="cta">
-    <div class="cta-trial">
-      <a href="#firstName" class="cta-trial__anchor link">
-        <strong>Try it free 7 days</strong> then $20/mo. thereafter
-      </a>
-    </div>
-
-    <form action="#" class="cta-form">
-      <label for="firstName"></label>
-      <input type="text" name="firstName" id="firstName" placeholder="First Name" class="cta-form__input">
-
-      <label for="lastName"></label>
-      <input type="text" name="firstName" id="lastName" placeholder="Last Name" class="cta-form__input">
-
-      <label for="email"></label>
-      <input type="email" name="email" id="email" placeholder="Email Address" class="cta-form__input">
-
-      <label for="password"></label>
-      <input type="password" name="password" id="password" placeholder="Password" class="cta-form__input">
-
-      <button class="cta-form__button">
-        Claim your free trial
-      </button>
-
-      <div class="cta-form__terms">
-        <p class="paragraph--small">
-          By clicking the button, you are agreeing to our <strong class="terms-link">
-            <a href="#" class="link">Terms and Services</a>
-          </strong>
+  <div class="desktop-layout">
+    <header class="hero container">
+      <div class="hero__heading">
+        <h1 class="heading-primary">learn to code by watching others</h1>
+      </div>
+  
+      <div class="hero__paragraph">
+        <p class="paragraph">
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+          but understanding how developers think is invaluable. 
         </p>
       </div>
-    </form>
-  </main>
-
-  <footer class="footer">
-    <p class="footer__paragraph">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="link">Frontend Mentor</a>. 
-      Coded by <a href="https://twitter.com/hamilton_i7" target="_blank" class="link">Juan Hamilton</a>.
-    </p>
-  </footer>
+    </header>
+  
+    <main class="cta container">
+      <div class="cta-trial">
+        <a href="#firstName" class="cta-trial__anchor link">
+          <strong>Try it free 7 days</strong> then $20/mo. thereafter
+        </a>
+      </div>
+  
+      <form action="#" class="cta-form">
+        <label for="firstName"></label>
+        <input type="text" name="firstName" id="firstName" placeholder="First Name" class="cta-form__input">
+  
+        <label for="lastName"></label>
+        <input type="text" name="firstName" id="lastName" placeholder="Last Name" class="cta-form__input">
+  
+        <label for="email"></label>
+        <input type="email" name="email" id="email" placeholder="Email Address" class="cta-form__input">
+  
+        <label for="password"></label>
+        <input type="password" name="password" id="password" placeholder="Password" class="cta-form__input">
+  
+        <button class="cta-form__button">
+          Claim your free trial
+        </button>
+  
+        <div class="cta-form__terms">
+          <p class="paragraph--small">
+            By clicking the button, you are agreeing to our <strong class="terms-link">
+              <a href="#" class="link">Terms and Services</a>
+            </strong>
+          </p>
+        </div>
+      </form>
+    </main>
+  </div>
 </body>
 </html>
-
-<!-- 
-  Try it free 7 days then $20/mo. thereafter
-
-  First Name 
-  Last Name 
-  Email Address
-  Password
-
-  Claim your free trial 
-
-  By clicking the button, you are agreeing to our Terms and Services
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
- -->
