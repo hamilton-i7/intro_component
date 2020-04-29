@@ -314,7 +314,7 @@ body {
 }
 
 .cta-form .input-box__input {
-  border: 2px solid rgba(62, 60, 73, 0.1);
+  border: 1px solid rgba(62, 60, 73, 0.1);
   border-radius: 6px;
   color: rgba(62, 60, 73, 0.65);
   font-family: inherit;
@@ -327,11 +327,11 @@ body {
 }
 
 .cta-form .input-box__input:focus {
-  border: 2px solid rgba(62, 60, 73, 0.35);
+  border: 1px solid rgba(62, 60, 73, 0.35);
 }
 
 .cta-form .input-box__input.invalid-input {
-  border: 2px solid #ff7a7a;
+  border: 1px solid #ff7a7a;
   color: #ff7a7a;
   margin-bottom: .8rem;
 }
