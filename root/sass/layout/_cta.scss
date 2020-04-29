@@ -30,9 +30,23 @@
         background-color: $color-accent;
         border-radius: 1rem;
         box-shadow: $shadow;
+        cursor: pointer;
         margin-bottom: 3rem;
         padding: 6% 15%;
         text-align: center;
+        transition: all .2s;
+
+        @media only screen and (pointer: fine) {
+            &:hover {
+                box-shadow: $shadow-hover;
+                transform: translateY(-.3rem);
+            }
+    
+            &:active {
+                box-shadow: $shadow-active;
+                transform: translateY(.2rem);
+            }
+        }
         
         //* BIG SCREENS ON LANDSCAPE
         @media only screen and (min-width: 1000px) and (orientation: landscape) {
@@ -52,27 +66,45 @@
         box-shadow: $shadow;
         padding: 5%;
 
-        &__input {
-            border: 1px solid rgba($color-neutral-1, .1);
-            border-radius: 6px;
-            color: rgba($color-neutral-1, .65);
-            font-family: inherit;
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            outline: none;
-            padding: 1.5rem;
-            width: 100%;
+        & .input-box {
+            position: relative;
 
-            &::placeholder {
-                color: inherit;
-                font-size: inherit;
-                font-weight: inherit;
-                text-transform: capitalize;
+            &__input {
+                border: 1px solid rgba($color-neutral-1, .1);
+                border-radius: 6px;
+                color: rgba($color-neutral-1, .65);
+                font-family: inherit;
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: 1.5rem;
+                outline: none;
+                padding: 1.5rem;
+                width: 100%;
+    
+                &.invalid-input {
+                    border: 1px solid $color-primary-1;
+                    color: $color-primary-1;
+                    margin-bottom: .8rem;
+
+                    &::placeholder {
+                        color: $color-primary-1;
+                    }
+                }
+    
+                &::placeholder {
+                    color: inherit;
+                    font-size: inherit;
+                    font-weight: inherit;
+                    text-transform: capitalize;
+                }
             }
 
-            &:invalid {
-
+            & .error-icon {
+                position: absolute;
+                right: 6%;
+                top: 30%;
+                transform: translateY(-30%);
+                width: 2rem;
             }
         }
 
@@ -82,6 +114,7 @@
             border-radius: 6px;
             box-shadow: $shadow-green;
             color: $color-white;
+            cursor: pointer;
             font-family: inherit;
             font-size: inherit;
             font-weight: 600;
@@ -91,7 +124,19 @@
             padding: 1.5rem 0;
             text-align: center;
             text-transform: uppercase;
+            transition: all .2s;
             width: 100%;
+
+            @media only screen and (pointer: fine) {
+                &:hover {
+                    box-shadow: $shadow-green-hover;
+                    transform: translateY(-.3rem);
+                }
+                &:active {
+                    box-shadow: $shadow-green;
+                    transform: translateY(0);
+                }
+            }
         }
 
         &__terms {
@@ -104,4 +149,15 @@
             }
         }
     }
+}
+.invalid,
+.empty {
+    color: $color-primary-1;
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
+    text-align: right;
+}
+
+.hidden {
+    display: none;
 }

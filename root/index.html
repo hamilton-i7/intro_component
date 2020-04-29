@@ -6,11 +6,13 @@
   <meta name="description" content="Intro component with sign up form. Challenge by Frontend mentor">
   <meta name="keywords" content="challenge, form, responsive, sign up">
 
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
   
-  <title>Frontend Mentor | Intro component with sign up form</title>
+  <script src="js/script.js" defer></script>
 </head>
 <body>
   <div class="desktop-layout">
@@ -29,24 +31,40 @@
   
     <main class="cta container">
       <div class="cta-trial">
-        <a href="#firstName" class="cta-trial__anchor link">
+        <a href="#" class="cta-trial__anchor link">
           <strong>Try it free 7 days</strong> then $20/mo. thereafter
         </a>
       </div>
   
       <form action="#" class="cta-form">
-        <label for="firstName"></label>
-        <input type="text" name="firstName" id="firstName" placeholder="First Name" class="cta-form__input">
-  
-        <label for="lastName"></label>
-        <input type="text" name="firstName" id="lastName" placeholder="Last Name" class="cta-form__input">
-  
-        <label for="email"></label>
-        <input type="email" name="email" id="email" placeholder="Email Address" class="cta-form__input">
-  
-        <label for="password"></label>
-        <input type="password" name="password" id="password" placeholder="Password" class="cta-form__input">
-  
+        <div class="input-box">
+          <label for="firstName"></label>
+          <input type="text" name="First Name" id="firstName" placeholder="First Name" class="input-box__input">
+          <p class="empty hidden" id="firstNameEmpty"><em>First Name cannot be empty</em></p>
+          <img src="images/icon-error.svg" alt="Error icon" class="error-icon hidden" id="iconFirstName">
+        </div>
+
+        <div class="input-box">
+          <label for="lastName"></label>
+          <input type="text" name="Last Name" id="lastName" placeholder="Last Name" class="input-box__input">
+          <p class="empty hidden" id="lastNameEmpty"><em>Last Name cannot be empty</em></p>
+          <img src="images/icon-error.svg" alt="Error icon" class="error-icon hidden" id="iconLastName">
+        </div>
+
+        <div class="input-box" id="emailBox">
+          <label for="email"></label>
+          <input type="email" name="Email" id="email" placeholder="Email Address" class="input-box__input">
+          <p class="invalid hidden" id="emailInvalid"><em>Email cannot be empty</em></p>
+          <img src="images/icon-error.svg" alt="Error icon" class="error-icon hidden" id="iconEmail">
+        </div>
+
+        <div class="input-box">
+          <label for="password"></label>
+          <input type="password" name="Password" id="password" placeholder="Password" class="input-box__input">
+          <p class="empty hidden" id="passwordEmpty"><em>Password cannot be empty</em></p>
+          <img src="images/icon-error.svg" alt="Error icon" class="error-icon hidden" id="iconPassword">
+        </div>
+
         <button class="cta-form__button">
           Claim your free trial
         </button>

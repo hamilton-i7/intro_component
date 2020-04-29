@@ -30,7 +30,7 @@ html {
 }
 
 body {
-  background-color: rgba(255, 122, 122, 0.9);
+  background-color: rgba(255, 122, 122, 0.7);
   background-image: url(../images/bg-intro-mobile.png);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -266,9 +266,27 @@ body {
   border-radius: 1rem;
   -webkit-box-shadow: 0 8px 2px rgba(43, 43, 43, 0.15);
           box-shadow: 0 8px 2px rgba(43, 43, 43, 0.15);
+  cursor: pointer;
   margin-bottom: 3rem;
   padding: 6% 15%;
   text-align: center;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+@media only screen and (pointer: fine) {
+  .cta-trial:hover {
+    -webkit-box-shadow: 0 12px 3px rgba(43, 43, 43, 0.25);
+            box-shadow: 0 12px 3px rgba(43, 43, 43, 0.25);
+    -webkit-transform: translateY(-0.3rem);
+            transform: translateY(-0.3rem);
+  }
+  .cta-trial:active {
+    -webkit-box-shadow: 0 5px 0 rgba(43, 43, 43, 0.05);
+            box-shadow: 0 5px 0 rgba(43, 43, 43, 0.05);
+    -webkit-transform: translateY(0.2rem);
+            transform: translateY(0.2rem);
+  }
 }
 
 @media only screen and (min-width: 1000px) and (orientation: landscape) {
@@ -291,7 +309,11 @@ body {
   padding: 5%;
 }
 
-.cta-form__input {
+.cta-form .input-box {
+  position: relative;
+}
+
+.cta-form .input-box__input {
   border: 1px solid rgba(62, 60, 73, 0.1);
   border-radius: 6px;
   color: rgba(62, 60, 73, 0.65);
@@ -304,32 +326,63 @@ body {
   width: 100%;
 }
 
-.cta-form__input::-webkit-input-placeholder {
+.cta-form .input-box__input.invalid-input {
+  border: 1px solid #ff7a7a;
+  color: #ff7a7a;
+  margin-bottom: .8rem;
+}
+
+.cta-form .input-box__input.invalid-input::-webkit-input-placeholder {
+  color: #ff7a7a;
+}
+
+.cta-form .input-box__input.invalid-input:-ms-input-placeholder {
+  color: #ff7a7a;
+}
+
+.cta-form .input-box__input.invalid-input::-ms-input-placeholder {
+  color: #ff7a7a;
+}
+
+.cta-form .input-box__input.invalid-input::placeholder {
+  color: #ff7a7a;
+}
+
+.cta-form .input-box__input::-webkit-input-placeholder {
   color: inherit;
   font-size: inherit;
   font-weight: inherit;
   text-transform: capitalize;
 }
 
-.cta-form__input:-ms-input-placeholder {
+.cta-form .input-box__input:-ms-input-placeholder {
   color: inherit;
   font-size: inherit;
   font-weight: inherit;
   text-transform: capitalize;
 }
 
-.cta-form__input::-ms-input-placeholder {
+.cta-form .input-box__input::-ms-input-placeholder {
   color: inherit;
   font-size: inherit;
   font-weight: inherit;
   text-transform: capitalize;
 }
 
-.cta-form__input::placeholder {
+.cta-form .input-box__input::placeholder {
   color: inherit;
   font-size: inherit;
   font-weight: inherit;
   text-transform: capitalize;
+}
+
+.cta-form .input-box .error-icon {
+  position: absolute;
+  right: 6%;
+  top: 30%;
+  -webkit-transform: translateY(-30%);
+          transform: translateY(-30%);
+  width: 2rem;
 }
 
 .cta-form__button {
@@ -339,6 +392,7 @@ body {
   -webkit-box-shadow: 0 4px 0 #35c285;
           box-shadow: 0 4px 0 #35c285;
   color: #f1f1f1;
+  cursor: pointer;
   font-family: inherit;
   font-size: inherit;
   font-weight: 600;
@@ -348,7 +402,24 @@ body {
   padding: 1.5rem 0;
   text-align: center;
   text-transform: uppercase;
+  -webkit-transition: all .2s;
+  transition: all .2s;
   width: 100%;
+}
+
+@media only screen and (pointer: fine) {
+  .cta-form__button:hover {
+    -webkit-box-shadow: 0 4px 0 #35c285, 0 6px 5px rgba(43, 43, 43, 0.25);
+            box-shadow: 0 4px 0 #35c285, 0 6px 5px rgba(43, 43, 43, 0.25);
+    -webkit-transform: translateY(-0.3rem);
+            transform: translateY(-0.3rem);
+  }
+  .cta-form__button:active {
+    -webkit-box-shadow: 0 4px 0 #35c285;
+            box-shadow: 0 4px 0 #35c285;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 .cta-form__terms {
@@ -359,6 +430,18 @@ body {
 
 .cta-form__terms .terms-link {
   color: #ff7a7a;
+}
+
+.invalid,
+.empty {
+  color: #ff7a7a;
+  font-size: 1.2rem;
+  margin-bottom: 1.8rem;
+  text-align: right;
+}
+
+.hidden {
+  display: none;
 }
 
 @media only screen and (min-width: 750px) and (max-width: 999px) and (min-height: 1100px) {
